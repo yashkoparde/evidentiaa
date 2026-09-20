@@ -3,3 +3,4 @@
 - [2026-09-20T09:50:31] Commit #3: feat(blockchain): integrate ethers.js browser provider connection [step 3/232]
 - [2026-09-20T10:03:20] Commit #4: refactor(types): define Evidence and AuditLog data models [step 4/232]
 - [2026-09-20T10:32:19] Commit #5: fix(supabase): handle null client fallback with Proxy wrapper [step 5/232]
+- [2026-09-20T12:36:35] Commit #6: feat(hash): add SHA-256 binary file hashing utility [step 6/232]
