@@ -17,3 +17,4 @@
 - [2026-09-20T19:57:57] Commit #17: fix(qr): guarantee QR code rendering on evidence completion modal [step 17/232]
 - [2026-09-20T23:10:10] Commit #18: refactor(context): streamline AppContext state dispatchers [step 18/232]
 - [2026-09-21T02:43:31] Commit #19: feat(report): support forensic PDF evidence document export [step 19/232]
+- [2026-09-21T03:04:48] Commit #20: perf(vite): optimize chunk splitting and module loading [step 20/232]
