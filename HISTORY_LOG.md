@@ -1,3 +1,4 @@
 - [2026-09-20T09:08:44] Commit #1: feat(vault): add initial project layout and dependencies [step 1/232]
 - [2026-09-20T09:38:17] Commit #2: style(ui): tweak glassmorphic card borders and background noise [step 2/232]
 - [2026-09-20T09:50:31] Commit #3: feat(blockchain): integrate ethers.js browser provider connection [step 3/232]
+- [2026-09-20T10:03:20] Commit #4: refactor(types): define Evidence and AuditLog data models [step 4/232]
