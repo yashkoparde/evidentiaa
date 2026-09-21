@@ -45,3 +45,4 @@
 - [2026-09-21T17:06:32] Commit #45: fix(auth): handle Supabase auth session change listener unsubscribes [step 45/232]
 - [2026-09-21T17:16:17] Commit #46: feat(tamper): build automated tampering severity indicator [step 46/232]
 - [2026-09-21T18:50:09] Commit #47: style(terminal): add typewriter TerminalText component effect [step 47/232]
+- [2026-09-21T19:45:21] Commit #48: feat(cases): add global case file search and association tagger [step 48/232]
