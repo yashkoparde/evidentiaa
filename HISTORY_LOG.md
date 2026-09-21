@@ -40,3 +40,4 @@
 - [2026-09-21T12:58:32] Commit #40: feat(login): implement restricted clearance code authentication [step 40/232]
 - [2026-09-21T14:08:43] Commit #41: fix(qr): guarantee QR code rendering on evidence completion modal [step 41/232]
 - [2026-09-21T14:19:15] Commit #42: refactor(context): streamline AppContext state dispatchers [step 42/232]
+- [2026-09-21T15:52:45] Commit #43: feat(report): support forensic PDF evidence document export [step 43/232]
