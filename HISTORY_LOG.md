@@ -28,3 +28,4 @@
 - [2026-09-21T06:02:26] Commit #28: refactor(types): define Evidence and AuditLog data models [step 28/232]
 - [2026-09-21T06:30:56] Commit #29: fix(supabase): handle null client fallback with Proxy wrapper [step 29/232]
 - [2026-09-21T07:30:03] Commit #30: feat(hash): add SHA-256 binary file hashing utility [step 30/232]
+- [2026-09-21T07:31:39] Commit #31: style(theme): customize tailwind colors for cyan and violet glows [step 31/232]
