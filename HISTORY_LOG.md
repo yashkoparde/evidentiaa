@@ -38,3 +38,4 @@
 - [2026-09-21T10:21:57] Commit #38: feat(audit): build system audit logs table with search filters [step 38/232]
 - [2026-09-21T11:58:03] Commit #39: style(nav): design responsive command bar and mobile drawer [step 39/232]
 - [2026-09-21T12:58:32] Commit #40: feat(login): implement restricted clearance code authentication [step 40/232]
+- [2026-09-21T14:08:43] Commit #41: fix(qr): guarantee QR code rendering on evidence completion modal [step 41/232]
