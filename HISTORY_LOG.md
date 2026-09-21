@@ -42,3 +42,4 @@
 - [2026-09-21T14:19:15] Commit #42: refactor(context): streamline AppContext state dispatchers [step 42/232]
 - [2026-09-21T15:52:45] Commit #43: feat(report): support forensic PDF evidence document export [step 43/232]
 - [2026-09-21T16:53:14] Commit #44: perf(vite): optimize chunk splitting and module loading [step 44/232]
+- [2026-09-21T17:06:32] Commit #45: fix(auth): handle Supabase auth session change listener unsubscribes [step 45/232]
