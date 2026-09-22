@@ -72,3 +72,4 @@
 - [2026-09-22T09:11:18] Commit #72: feat(cases): add global case file search and association tagger [step 72/232]
 - [2026-09-22T11:16:41] Commit #73: feat(vault): add initial project layout and dependencies [step 73/232]
 - [2026-09-22T11:20:33] Commit #74: style(ui): tweak glassmorphic card borders and background noise [step 74/232]
+- [2026-09-22T12:23:13] Commit #75: feat(blockchain): integrate ethers.js browser provider connection [step 75/232]
