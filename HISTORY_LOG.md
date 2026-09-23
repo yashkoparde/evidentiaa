@@ -95,3 +95,4 @@
 - [2026-09-23T09:48:29] Commit #95: style(terminal): add typewriter TerminalText component effect [step 95/232]
 - [2026-09-23T10:09:09] Commit #96: feat(cases): add global case file search and association tagger [step 96/232]
 - [2026-09-23T10:17:42] Commit #97: feat(vault): add initial project layout and dependencies [step 97/232]
+- [2026-09-23T11:17:05] Commit #98: style(ui): tweak glassmorphic card borders and background noise [step 98/232]
