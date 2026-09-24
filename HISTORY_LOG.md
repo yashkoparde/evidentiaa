@@ -135,3 +135,4 @@
 - [2026-09-24T17:47:21] Commit #135: style(nav): design responsive command bar and mobile drawer [step 135/232]
 - [2026-09-24T18:20:54] Commit #136: feat(login): implement restricted clearance code authentication [step 136/232]
 - [2026-09-24T18:21:07] Commit #137: fix(qr): guarantee QR code rendering on evidence completion modal [step 137/232]
+- [2026-09-24T18:49:59] Commit #138: refactor(context): streamline AppContext state dispatchers [step 138/232]
