@@ -146,3 +146,4 @@
 - [2026-09-25T00:54:30] Commit #146: style(ui): tweak glassmorphic card borders and background noise [step 146/232]
 - [2026-09-25T01:02:09] Commit #147: feat(blockchain): integrate ethers.js browser provider connection [step 147/232]
 - [2026-09-25T02:02:40] Commit #148: refactor(types): define Evidence and AuditLog data models [step 148/232]
+- [2026-09-25T03:02:10] Commit #149: fix(supabase): handle null client fallback with Proxy wrapper [step 149/232]
