@@ -211,3 +211,4 @@
 - [2026-09-27T03:20:05] Commit #211: feat(report): support forensic PDF evidence document export [step 211/232]
 - [2026-09-27T04:39:49] Commit #212: perf(vite): optimize chunk splitting and module loading [step 212/232]
 - [2026-09-27T04:43:06] Commit #213: fix(auth): handle Supabase auth session change listener unsubscribes [step 213/232]
+- [2026-09-27T04:51:18] Commit #214: feat(tamper): build automated tampering severity indicator [step 214/232]
