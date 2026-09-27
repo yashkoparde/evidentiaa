@@ -222,3 +222,4 @@
 - [2026-09-27T13:11:15] Commit #222: feat(hash): add SHA-256 binary file hashing utility [step 222/232]
 - [2026-09-27T13:12:35] Commit #223: style(theme): customize tailwind colors for cyan and violet glows [step 223/232]
 - [2026-09-27T13:27:41] Commit #224: feat(ai): integrate Gemini diagnostic summary generator [step 224/232]
+- [2026-09-27T14:18:26] Commit #225: docs(readme): update setup guidelines and environment requirements [step 225/232]
