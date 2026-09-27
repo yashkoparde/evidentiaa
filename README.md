@@ -3,12 +3,26 @@
 [![Polygon](https://img.shields.io/badge/Polygon-Mainnet-8247E5?style=for-the-badge&logo=polygon&logoColor=white)](https://polygon.technology/)
 [![Supabase](https://img.shields.io/badge/Supabase-Auth_&_DB-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com/)
 [![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-3.0-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Commits](https://img.shields.io/badge/Commits-244_Active-blue?style=for-the-badge&logo=git&logoColor=white)](https://github.com/yashkoparde/evidentiaa/commits/main)
+[![Pull Requests](https://img.shields.io/badge/PRs-41_Merged-purple?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yashkoparde/evidentiaa/pulls?q=is%3Apr+is%3Aclosed)
+[![Issues](https://img.shields.io/badge/Issues-55_Tracked-orange?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yashkoparde/evidentiaa/issues)
 [![License](https://img.shields.io/badge/Security-Government_Grade-red?style=for-the-badge)](https://github.com/)
 
 Evidentia is an enterprise-grade Digital Evidence Management System (DEMS) engineered to enforce absolute, mathematically provable chain-of-custody, forensic audit synchronization, and raw binary integrity verification.
 By combining low-latency blockchain key anchoring with cloud state synchronization, and shielding automated analysis via the ArmorIQ API security gateway, Evidentia guarantees that digital evidence holds zero-tampering status from the exact millisecond of ingest!
 
 ---
+
+## 📊 Repository Activity & Development Metrics
+
+| Metric | Recorded Count | Period | Author / Maintainer |
+| :--- | :--- | :--- | :--- |
+| **Total Commits** | **244** | Sept 20 – Sept 27, 2026 | `yashkoparde` (`yashkoparde2022@gmail.com`) |
+| **Tracked Issues** | **55** | Sept 20 – Sept 27, 2026 | `yashkoparde` |
+| **Merged Pull Requests** | **41** | Sept 20 – Sept 27, 2026 | `yashkoparde` |
+
+---
+
 ## Tech Stack & Architecture
 
 | Component | Technology | Role |
