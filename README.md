@@ -31,33 +31,33 @@ In traditional database systems, a Database Administrator (DBA) or compromised s
 
 ```mermaid
 graph TD
-    subgraph CLIENT_TIER [1. Ingest & Proof Generation Tier]
-        A["👤 Investigator / Officer"] -->|Uploads File Stream| B["⚡ Client WebCrypto Engine"]
-        B -->|Computes Immutable SHA-256| C["🔐 Binary Hash Digest (256-bit)"]
+    subgraph CLIENT_TIER [1. Ingest and Proof Generation Tier]
+        A["Investigator / Officer"] -->|Uploads File Stream| B["Client WebCrypto Engine"]
+        B -->|Computes Immutable SHA-256| C["Binary Hash Digest (256-bit)"]
     end
 
     subgraph STORAGE_TIER [2. Cloud Vault Tier]
-        C -->|Stream Payload| D["📦 Supabase Storage (Encrypted S3)"]
-        C -->|Persist SQL Record| E["🗄️ Supabase PostgreSQL Engine"]
+        C -->|Stream Payload| D["Supabase Storage (Encrypted S3)"]
+        C -->|Persist SQL Record| E["Supabase PostgreSQL Engine"]
     end
 
     subgraph BLOCKCHAIN_TIER [3. Immutable Consensus Tier]
-        C -->|Ethers.js Wallet Prompt| F["🦊 MetaMask Web3 Provider"]
-        F -->|Broadcast storeEvidence()| G["⛓️ Polygon EVM Smart Contract (0x6785...1de0)"]
+        C -->|Ethers.js Wallet Prompt| F["MetaMask Web3 Provider"]
+        F -->|Broadcast storeEvidence| G["Polygon EVM Smart Contract"]
     end
 
     subgraph AI_TIER [4. Forensic AI Diagnostic Tier]
-        E -->|Trigger Analysis| H["🤖 Express Server API Gateway"]
-        H -->|Intent Token Lock| I["🛡️ ArmorIQ Security Bridge"]
-        I -->|Execute Diagnostic| J["🧠 Gemini 3 Flash LLM (Parikshak.ai)"]
+        E -->|Trigger Analysis| H["Express Server API Gateway"]
+        H -->|Intent Token Lock| I["ArmorIQ Security Bridge"]
+        I -->|Execute Diagnostic| J["Gemini 3 Flash LLM (Parikshak.ai)"]
         J -->|Return Structured Brief| E
     end
 
-    G -->|Verify On-Chain Hash| K["⚖️ Real-Time Audit Comparator"]
+    G -->|Verify On-Chain Hash| K["Real-Time Audit Comparator"]
     E -->|Verify DB Hash| K
     B -->|Verify Local Hash| K
-    K -->|3-Way Hash Match| L["✅ VERIFIED: Zero-Tampering Status"]
-    K -->|Hash Mismatch| M["🚨 TAMPERED: Integrity Failure Trigger"]
+    K -->|3-Way Hash Match| L["VERIFIED: Zero-Tampering Status"]
+    K -->|Hash Mismatch| M["TAMPERED: Integrity Failure Trigger"]
 ```
 
 ---
@@ -121,40 +121,23 @@ sequenceDiagram
 
 ---
 
-## 🔐 Zero-Knowledge Ledger Comparison Matrix
+## 🔐 Zero-Knowledge Ledger Comparison Flow
 
 When an investigator opens an artifact, Evidentia executes an automatic **3-Way Zero-Knowledge Comparison Loop**:
 
-```
-                         [ COMPLIANCE LEDGER HARMONY ENGINE ]
-                                         
-                            User Dropped Evidentiary Item
-                                          |
-                                          v
-                             Local WebCrypto SHA-256 Hash
-                                          |
-                                    Target Hash (A)
-                                          |
-                   +----------------------+----------------------+
-                   |                                             |
-                   v                                             v
-        [ Supabase DB Records ]                       [ Polygon Smart Contract ]
-        Query Recorded Metadata                      Query Immutable Ledger Block
-                   |                                             |
-             Database Hash (B)                             Signed Contract Hash (C)
-                   |                                             |
-                   +----------------------+----------------------+
-                                          |
-                                          v
-                          Cryptographic Comparator Loop
-                             
-                               Compare Hash (A) === (B) === (C)
-                               
-                   +----------------------+----------------------+
-                   | Match                                       | Mismatch Detected
-                   v                                             v
-         [ RECORD VERIFIED AUTHENTIC ]                 [ CRITICAL INTEGRITY BREACH ]
-         Status: VERIFIED                              Status: TAMPERED
+```mermaid
+flowchart TD
+    A["User Dropped Evidentiary Item"] --> B["Local WebCrypto SHA-256 Hash"]
+    B --> C["Target Hash (A)"]
+    C --> D["Query Recorded Metadata"]
+    C --> E["Query Immutable Ledger Block"]
+    D --> F["Database Hash (B)"]
+    E --> G["Signed Contract Hash (C)"]
+    F --> H["Cryptographic Comparator Loop"]
+    G --> H
+    H -->|Compare Hash A === B === C| I{"Integrity Status Check"}
+    I -->|Match| J["RECORD VERIFIED AUTHENTIC (VERIFIED)"]
+    I -->|Mismatch Detected| K["CRITICAL INTEGRITY BREACH (TAMPERED)"]
 ```
 
 ---
@@ -236,7 +219,46 @@ app.post("/api/analyze-evidence", async (req, res) => {
 
 ---
 
-## 🗄️ Relational Database Schema & SQL Setup
+## 🗄️ Relational Database Schema & Entity-Relationship Architecture
+
+The entity-relationship diagram below maps out the underlying relational structure of the evidence vault and audit log stores:
+
+```mermaid
+erDiagram
+    USERS ||--o{ EVIDENCE : "owns/ingests"
+    USERS ||--o{ LOGS : "triggers"
+    EVIDENCE ||--o{ LOGS : "references"
+
+    EVIDENCE {
+        uuid id PK
+        uuid user_id FK
+        string title
+        string case_id
+        string file_name
+        bigint file_size
+        string file_type
+        string file_hash
+        string tx_hash
+        string status
+        string ai_summary
+        integer ai_risk_score
+        string_array ai_observations
+        string storage_path
+        timestamptz created_at
+        timestamptz last_verified
+    }
+
+    LOGS {
+        uuid id PK
+        uuid user_id FK
+        uuid evidence_id FK
+        string action
+        string details
+        string user_name
+        string type
+        timestamptz created_at
+    }
+```
 
 Below is the verified DDL script to create the relational tables, RLS policies, and index structures in the **Supabase SQL Editor**:
 
