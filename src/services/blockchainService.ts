@@ -44,14 +44,17 @@ class BlockchainService {
    * Stores a hash on the blockchain.
    */
   async storeHash(hash: string, caseId: string = 'UNLINKED'): Promise<{ success: boolean; txHash?: string; error?: string }> {
-    if (!this.isConnected || !this.signer) {
-      const connected = await this.connectWallet();
-      if (!connected) return { success: false, error: 'Wallet not connected' };
-    }
-
     if (!this.contractAddress) {
       console.warn('VITE_CONTRACT_ADDRESS not configured. Falling back to mock.');
       return this.mockStore(hash, caseId);
+    }
+
+    if (!this.isConnected || !this.signer) {
+      const connected = await this.connectWallet();
+      if (!connected) {
+        console.warn('Wallet not connected. Falling back to local mock chain registration.');
+        return this.mockStore(hash, caseId);
+      }
     }
 
     try {
@@ -81,9 +84,12 @@ class BlockchainService {
    * Fetches a record from the blockchain by hash.
    */
   async getHash(hash: string): Promise<BlockchainRecord | null> {
-    // If no contract, check mock
+    // Check mock database first if present
+    const mockRecord = this.mockGet(hash);
+    if (mockRecord) return mockRecord;
+
     if (!this.contractAddress) {
-      return this.mockGet(hash);
+      return null;
     }
 
     try {

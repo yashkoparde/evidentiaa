@@ -148,7 +148,7 @@ export const Upload: React.FC = () => {
 
     // STEP 3: Blockchain Commitment
     setAnalysisText("Committing hash to blockchain ledger...");
-    const blockchainResult = await blockchainService.storeHash(hash);
+    const blockchainResult = await blockchainService.storeHash(hash, metadata.caseId);
     if (!blockchainResult.success) {
       setAnalysisText(`Blockchain error: ${blockchainResult.error}`);
       await new Promise(r => setTimeout(r, 2000));
