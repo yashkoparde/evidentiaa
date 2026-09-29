@@ -707,11 +707,14 @@ export const EvidenceDetail: React.FC<EvidenceDetailProps> = ({ evidenceId, onBa
                     <div className="flex items-center justify-between border-b border-white/5 pb-2">
                       <h5 className="text-[10px] font-mono text-white/40 uppercase tracking-widest">Internal Ledger Sync</h5>
                       {evidence.blockchainHash && (
-                        <div 
-                          className="text-[9px] font-mono text-white/20 flex items-center gap-1.5"
+                        <a 
+                          href={`/?tx=${evidence.blockchainHash}&evidenceId=${evidence.id}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-[9px] font-mono text-evidentia-accent hover:underline flex items-center gap-1.5"
                         >
-                          Tx: {evidence.blockchainHash.substring(0, 10)}... <Hash className="w-2.5 h-2.5" />
-                        </div>
+                          Tx: {evidence.blockchainHash.substring(0, 10)}... <ExternalLink className="w-2.5 h-2.5" />
+                        </a>
                       )}
                     </div>
                     <div className="space-y-2">

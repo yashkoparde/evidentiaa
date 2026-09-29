@@ -460,7 +460,7 @@ export const Upload: React.FC = () => {
                 <GlassCard className="flex flex-col items-center justify-center p-6 gap-4">
                   <div className="p-2 bg-white rounded-lg shadow-[0_0_20px_rgba(255,255,255,0.1)]">
                     <QRCodeSVG 
-                      value={`https://polygonscan.com/tx/${lastTxHash}`}
+                      value={`${window.location.origin}/?tx=${lastTxHash}`}
                       size={100}
                       level="H"
                       includeMargin={false}
@@ -469,7 +469,7 @@ export const Upload: React.FC = () => {
                   <div className="text-center space-y-2">
                     <p className="text-[10px] font-mono text-white/40 uppercase tracking-widest">Transaction Hash</p>
                     <a 
-                      href={`https://polygonscan.com/tx/${lastTxHash}`}
+                      href={`/?tx=${lastTxHash}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-[9px] font-mono text-evidentia-accent flex items-center justify-center gap-1 hover:underline truncate max-w-[180px]"

@@ -13,20 +13,30 @@ import { Verify } from './pages/Verify';
 import { AuditLogs } from './pages/AuditLogs';
 import { EvidenceDetail } from './pages/EvidenceDetail';
 import { NotificationSystem } from './components/NotificationSystem';
+import { TxExplorer } from './pages/TxExplorer';
 import { AnimatePresence, motion } from 'motion/react';
 
 const AppContent: React.FC = () => {
   const { currentUser, isLoading, configError, activeTab, setActiveTab } = useApp();
   const [selectedEvidenceId, setSelectedEvidenceId] = useState<string | null>(null);
+  const [isTxExplorerView, setIsTxExplorerView] = useState(false);
 
-  // Check for public share link on initial load
+  // Check for public share link or transaction explorer mode on initial load
   React.useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const publicEvidenceId = params.get('evidence');
-    if (publicEvidenceId) {
+    const txParam = params.get('tx');
+    
+    if (txParam) {
+      setIsTxExplorerView(true);
+    } else if (publicEvidenceId) {
       setSelectedEvidenceId(publicEvidenceId);
     }
   }, []);
+
+  if (isTxExplorerView) {
+    return <TxExplorer />;
+  }
 
   if (configError) {
     return (
