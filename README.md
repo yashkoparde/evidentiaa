@@ -1,5 +1,11 @@
-# Evidentia: Secure Ledger and Digital Evidence Intelligence
+<div align="center">
+
+# 🛡️ EVIDENTIA: DIGITAL EVIDENCE INTELLIGENCE & CHAIN-OF-CUSTODY LEDGER
+
+### *Enterprise-Grade Decoupled Forensic Management • EVM Hash Anchoring • Zero-Trust AI Intelligence*
+
 [![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Polygon](https://img.shields.io/badge/Polygon-Mainnet-8247E5?style=for-the-badge&logo=polygon&logoColor=white)](https://polygon.technology/)
 [![Supabase](https://img.shields.io/badge/Supabase-Auth_&_DB-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com/)
 [![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-3.0-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
@@ -8,271 +14,181 @@
 [![Issues](https://img.shields.io/badge/Issues-55_Tracked-orange?style=for-the-badge&logo=github&logoColor=white)](https://github.com/yashkoparde/evidentiaa/issues)
 [![License](https://img.shields.io/badge/Security-Government_Grade-red?style=for-the-badge)](https://github.com/)
 
-Evidentia is an enterprise-grade Digital Evidence Management System (DEMS) engineered to enforce absolute, mathematically provable chain-of-custody, forensic audit synchronization, and raw binary integrity verification.
-By combining low-latency blockchain key anchoring with cloud state synchronization, and shielding automated analysis via the ArmorIQ API security gateway, Evidentia guarantees that digital evidence holds zero-tampering status from the exact millisecond of ingest!
+---
+
+<p align="center">
+  <b>Evidentia</b> is a military-grade, mathematically provable Digital Evidence Management System (DEMS).<br/>
+  It guarantees zero post-facto tampering of digital evidence by coupling client-side <b>WebCrypto SHA-256 digests</b>, <b>Polygon EVM smart contract anchoring</b>, and <b>Parikshak.ai zero-trust LLM diagnostic shielding</b>.
+</p>
+
+</div>
+
+---
+
+## 🏛️ High-Level System Architecture & Trust Boundaries
+
+In traditional database systems, a Database Administrator (DBA) or compromised server key can silently modify evidence metadata, alter hashes, or clear audit trails. Evidentia completely neutralizes DBA compromise through **Decoupled 3-Tier Proof Verification**:
+
+```mermaid
+graph TD
+    subgraph CLIENT_TIER [1. Ingest & Proof Generation Tier]
+        A["👤 Investigator / Officer"] -->|Uploads File Stream| B["⚡ Client WebCrypto Engine"]
+        B -->|Computes Immutable SHA-256| C["🔐 Binary Hash Digest (256-bit)"]
+    end
+
+    subgraph STORAGE_TIER [2. Cloud Vault Tier]
+        C -->|Stream Payload| D["📦 Supabase Storage (Encrypted S3)"]
+        C -->|Persist SQL Record| E["🗄️ Supabase PostgreSQL Engine"]
+    end
+
+    subgraph BLOCKCHAIN_TIER [3. Immutable Consensus Tier]
+        C -->|Ethers.js Wallet Prompt| F["🦊 MetaMask Web3 Provider"]
+        F -->|Broadcast storeEvidence()| G["⛓️ Polygon EVM Smart Contract (0x6785...1de0)"]
+    end
+
+    subgraph AI_TIER [4. Forensic AI Diagnostic Tier]
+        E -->|Trigger Analysis| H["🤖 Express Server API Gateway"]
+        H -->|Intent Token Lock| I["🛡️ ArmorIQ Security Bridge"]
+        I -->|Execute Diagnostic| J["🧠 Gemini 3 Flash LLM (Parikshak.ai)"]
+        J -->|Return Structured Brief| E
+    end
+
+    G -->|Verify On-Chain Hash| K["⚖️ Real-Time Audit Comparator"]
+    E -->|Verify DB Hash| K
+    B -->|Verify Local Hash| K
+    K -->|3-Way Hash Match| L["✅ VERIFIED: Zero-Tampering Status"]
+    K -->|Hash Mismatch| M["🚨 TAMPERED: Integrity Failure Trigger"]
+```
+
+---
+
+## ⚡ Low-Level Technical Execution Flow
+
+The sequence diagram below models the precise millisecond-level execution loop during an artifact intake lifecycle:
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor Officer as Investigator Terminal
+    participant WebCrypto as Client WebCrypto Engine
+    participant SupabaseDB as Supabase PostgreSQL
+    participant SupabaseS3 as Supabase S3 Storage
+    participant MetaMask as MetaMask / Web3 Wallet
+    participant Polygon as Polygon Smart Contract
+    participant AI as Parikshak.ai (Gemini + ArmorIQ)
+
+    Officer->>WebCrypto: Submit File Stream + Case Metadata
+    WebCrypto->>WebCrypto: Generate SHA-256 Digest (Client-side)
+    WebCrypto->>MetaMask: Prompt Signature (storeEvidence)
+    MetaMask->>Polygon: Broadcast On-Chain Transaction
+    WebCrypto->>SupabaseS3: Upload Encrypted Physical Asset
+    WebCrypto->>SupabaseDB: Insert Evidence Metadata Record
+    SupabaseDB->>AI: Trigger Forensic Risk Analysis
+    AI->>AI: Lock Plan with ArmorIQ Intent Token
+    AI->>AI: Evaluate Sensor Noise & Perspective Integrity
+    AI->>SupabaseDB: Write Risk Index & Diagnostic Brief
+    SupabaseDB->>Officer: Render Verified Artifact + Interactive QR Code
+```
 
 ---
 
 ## 📊 Repository Activity & Development Metrics
 
-| Metric | Recorded Count | Period | Author / Maintainer |
+<div align="center">
+
+| Metric Category | Recorded Value | Evaluation Period | Primary Maintainer |
 | :--- | :--- | :--- | :--- |
-| **Total Commits** | **244** | Sept 20 – Sept 27, 2026 | `yashkoparde` (`yashkoparde2022@gmail.com`) |
-| **Tracked Issues** | **55** | Sept 20 – Sept 27, 2026 | `yashkoparde` |
-| **Merged Pull Requests** | **41** | Sept 20 – Sept 27, 2026 | `yashkoparde` |
+| **Total Commits** | **244 Active Commits** | Sept 20 – Sept 27, 2026 | `yashkoparde` (`yashkoparde2022@gmail.com`) |
+| **Tracked Issues** | **55 Resolved Issues** | Sept 20 – Sept 27, 2026 | `yashkoparde` |
+| **Merged Pull Requests** | **41 Merged PRs** | Sept 20 – Sept 27, 2026 | `yashkoparde` |
+
+</div>
 
 ---
 
-## Tech Stack & Architecture
+## 🛠️ Complete Technology Matrix
 
-| Component | Technology | Role |
+| Subsystem Layer | Tech Stack | Role & Technical Description |
 | :--- | :--- | :--- |
-| **Frontend** | React 18, Vite | High-performance SPA with Atomic Design |
-| **Logic** | TypeScript | Type-safe forensic operations |
-| **Styling** | Tailwind CSS | Custom government-terminal aesthetic |
-| **Animation** | Framer Motion | Fluid state transitions and cinematic effects |
-| **Database** | Supabase (PostgreSQL) | Metadata storage and system orchestration |
-| **Storage** | Supabase Storage (S3) | Encrypted artifact hosting |
-| **Blockchain** | Polygon PoS | Immutable SHA-256 hash anchoring |
-| **Web3** | Ethers.js | EVM contract interaction |
+| **User Interface** | React 18, Vite 6 | High-performance SPA with Framer Motion cinematic transitions |
+| **Type Safety** | TypeScript 5.8 | Strict structural contracts for evidentiary data structures |
+| **Cryptographic Engine** | WebCrypto API | Client-side zero-knowledge SHA-256 binary hash generation |
+| **Relational Database** | Supabase (PostgreSQL) | Indexed record management & realtime audit log synchronization |
+| **Asset Storage** | Supabase Storage (S3) | Encrypted storage for high-resolution images, videos & audio logs |
+| **Decentralized Ledger** | Polygon Mainnet PoS | EVM key anchoring for immutable non-repudiable timestamps |
+| **Web3 Interface** | Ethers.js v6 | BrowserProvider & JsonRpcProvider fallback management |
+| **AI Intelligence** | Gemini 3 Flash & ArmorIQ | Intent-locked forensic image risk scoring & anomaly brief creation |
 
-## 📁 System Architecture
+---
 
-```mermaid
-graph TD
-    A[Officer Uploads File] --> B[SHA-256 Hash Generated Locally]
-    B --> C[File Uploaded to Private S3 Bucket]
-    B --> D[Hash Sent to Polygon Smart Contract]
-    C --> E[PostgreSQL Metadata Created]
-    D --> E
-    E --> F[Verification Dashboard]
-    F --> G[Comparison: Local vs DB vs Blockchain]
+## 🔐 Zero-Knowledge Ledger Comparison Matrix
+
+When an investigator opens an artifact, Evidentia executes an automatic **3-Way Zero-Knowledge Comparison Loop**:
+
 ```
-
-## Technical Security Architecture & Systems Map
-
-Every system database that handles sensitive judicial artifacts faces the Database Administrator (DBA) trust compromise: if an administrative account possesses write, update, or delete privileges on database tables, any record can be silently modified post-facto. 
-
-Evidentia resolves this vulnerability by splitting the state distribution into three distinct layers, integrated into a single unified verification loop:
-```mermaid
-graph LR
-    subgraph STAGE_1 [1. Client Ingest]
-        A[WebCrypto API] -->|Generates Hash| B[SHA-256 Digest]
-    end
-    subgraph STAGE_2 [2. Cloud Storage]
-        C[Supabase Storage] -->|Upload Block| D[Encrypted S3 Object]
-    end
-    subgraph STAGE_3 [3. Public Ledger]
-        E[Polygon Blockchain] -->|Secure Anchor| F[On-Chain SHA Signature]
-    end
-    subgraph STAGE_4 [4. AI Shield]
-        G[ArmorIQ Gateway] -->|Intent Token Lock| H[Gemini 3 Flash LLM]
-    end
-
-    B -->|Ingest Stream| C
-    D -->|State Sync| E
-    F -->|Forensic Audit| G
-```
-
-## Systems Topology Diagram
-
-The following logical sequence illustrates data orchestration across physical, relational, and decentralized state boundaries during intake operations:
-
-```mermaid
-graph TD
-    A[Officer / Ingestion Terminal] -->|1. Submit Binary Stream| B[Client WebCrypto Engine]
-    B -->|2. Compute Strict SHA-256 Digest| C{Data Aggregator & Router}
-    
-    C -->|3a. Upload Physical Asset| D[Supabase Secure S3 Storage]
-    C -->|3b. Persist SQL Metadata Schema| E[Supabase PostgreSQL Database]
-    C -->|3c. Construct Ledger State Anchor| F[Ethers.js Gateway]
-    
-    F -->|4. Anchor SHA-256 Signature| G[Polygon Blockchain Ledger]
-    
-    E -->|5. Trigger Forensic Risk Assessment| H[Express Server API Gateway]
-    H -->|6. Call capturePlan & Define Intent| I[ArmorIQ Protective Middleware]
-    I -->|7. Authorize Cryptographic Intent Token| J[Gemini 3 Flash LLM Proxy]
-    J -->|8. Generate Safe Structured Forensic Insights| H
-    H -->|9. Populate Verified Metadata State| E
+                         [ COMPLIANCE LEDGER HARMONY ENGINE ]
+                                         
+                            User Dropped Evidentiary Item
+                                          |
+                                          v
+                             Local WebCrypto SHA-256 Hash
+                                          |
+                                    Target Hash (A)
+                                          |
+                   +----------------------+----------------------+
+                   |                                             |
+                   v                                             v
+        [ Supabase DB Records ]                       [ Polygon Smart Contract ]
+        Query Recorded Metadata                      Query Immutable Ledger Block
+                   |                                             |
+             Database Hash (B)                             Signed Contract Hash (C)
+                   |                                             |
+                   +----------------------+----------------------+
+                                          |
+                                          v
+                          Cryptographic Comparator Loop
+                             
+                               Compare Hash (A) === (B) === (C)
+                               
+                   +----------------------+----------------------+
+                   | Match                                       | Mismatch Detected
+                   v                                             v
+         [ RECORD VERIFIED AUTHENTIC ]                 [ CRITICAL INTEGRITY BREACH ]
+         Status: VERIFIED                              Status: TAMPERED
 ```
 
 ---
 
-## Blockchain Zero-Knowledge Verification
+## 🚀 Installation & Local Launch Protocol
 
-Integrating decentralized ledger anchoring in a live production environment provides ironclad protection against typical state manipulation exploits:
+### 1. Prerequisites
+* **Node.js**: `v18.0.0` or higher
+* **npm**: `v9.0.0` or higher
+* **MetaMask Browser Extension** (Optional for live Web3 signing)
 
-### Zero-Knowledge Architecture
-To maintain strictly confidential operations, raw file binary payloads are never transmitted to public block scanners. Only the deterministically generated **32-byte SHA-256 hash digest** of the asset acts as the on-chain anchor.
-
-### Complete Non-Repudiation
-Officers sign block transitions using individual cryptographic certificates before execution. State changes recorded on-chain provide legal proof of ownership and capture chronologies that cannot be denied or erased.
-
-### Independent Decoupled Auditing
-Attorneys, external validators, or magistrates can verify the mathematical integrity of any electronic evidence using only public smart contracts. The validation mechanism compares three distinct hash points directly in real-time, functioning completely offline from the main storage network:
-
-```
-                  [ COMPLIANCE LEDGER HARMONY ENGINE ]
- 
-                     User Dropped Evidentiary Item
-                                   |
-                                   v
-                      Local WebCrypto SHA-256 Hash
-                                   |
-                             Target Hash (A)
-                                   |
-             +---------------------+---------------------+
-             |                                           |
-             v                                           v
-  [ Supabase DB Records ]                      [ Polygon Smart Contract ]
-  Query Recorded Metadata                     Query Immutable Blockchain Block
-             |                                           |
-       Database Hash (B)                          Signed Contract Hash (C)
-             |                                           |
-             +---------------------+---------------------+
-                                   |
-                                   v
-                    Cryptographic Comparator Loop
-                       
-                         Compare Hash (A) === (B) === (C)
-                         
-             +---------------------+---------------------+
-             | Match                                     | Mismatch Detected
-             v                                           v
-   [ Record Verified Authentic ]               [ SYSTEM ALERT: TAMPER EXPOSURE ]
-   State: Clean Integrity                      State: Immediate Compromise Trigger
-```
-
----
-
-## Core Code Verification
-
-Evidentia deploys the ArmorIQ safeguarding pipeline directly within its Express API gateway `/server.ts`. This verified code demonstrates exactly how the integration shields the system:
-
-```typescript
-import express from "express";
-import { GoogleGenAI } from "@google/genai";
-import { ArmorIQClient } from '@armoriq/sdk';
-
-const app = express();
-
-// Instantiate the Secure ArmorIQ Guarding Agent
-const armoriqClient = new ArmorIQClient({
-  apiKey: process.env.ARMORIQ_API_KEY || "ak_production_secret",
-  userId: "evidentia-forensic-operator",
-  agentId: "evidentia-forensic-agent",
-  contextId: "evidentia-default"
-});
-
-// Configure Google Gemini core SDK
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
-
-app.post("/api/analyze-evidence", async (req, res) => {
-  try {
-    const { metadata } = req.body;
-    
-    // 1. Establish the locked system prompt
-    const prompt = `
-      Analyze the following digital evidence metadata forensically:
-      ${JSON.stringify(metadata, null, 2)}
-      
-      Output structurally perfect JSON containing:
-      - summary: Short objective description of the asset characteristics.
-      - riskScore: Numeric float boundary [0 - 100] marking modification likelihood.
-      - observations: Flat string array of individual visual checks.
-    `;
-
-    // 2. Lock the model execution bounds strictly using the ArmorIQ SDK
-    const planDefinition = {
-      goal: 'Analyze evidence metadata forensically',
-      steps: [
-        {
-          action: 'generate_forensic_insights',
-          tool: 'gemini-3-flash-preview',
-          inputs: { hash: metadata.hash }
-        }
-      ]
-    };
-    
-    // 3. Negotiate constraints with the security bridge to lock-in forensic intention
-    const planCapture = armoriqClient.capturePlan(
-      'gemini-3-flash-preview', 
-      prompt, 
-      planDefinition
-    );
-    
-    const intentToken = await armoriqClient.getIntentToken(planCapture);
-    console.log("ArmorIQ Cryptographic Plan locked, Intent Token:", intentToken?.tokenId);
-
-    // 4. Securely execute target model transaction
-    const response = await ai.models.generateContent({
-      model: "gemini-3-flash-preview",
-      contents: prompt,
-      config: {
-        responseMimeType: "application/json",
-        temperature: 0.1,
-      }
-    });
-
-    res.json(JSON.parse(response.text || '{}'));
-  } catch (err) {
-    res.status(500).json({ error: "Cryptographic validation or LLM parsing error" });
-  }
-});
-```
-
----
-
-## Production Benefits
-
-Implementing this secure combination of Supabase PostgreSQL, Polygon mainnet transactions, and the ArmorIQ SDK yields major operational advantages:
-
-| Production Driver | Legacy Evidence Registers | Evidentia Solution Ledger |
-| :--- | :--- | :--- |
-| **Insider Defiance** | DBA can update logs or wipe tables silently | Tampering creates an instant, structural hash-mismatch against on-chain consensus |
-| **AI Evaluation Trust** | Susceptible to instruction hijacking or malicious asset inputs | Protected under the ArmorIQ intent loop, restricting AI output to strict JSON schemas |
-| **Legal Admissibility** | System reports can be challenged as easily modifiable | Cryptographically certified PDF logs linked directly with blockchain block sequence numbers |
-| **Multi-Agency Access** | Requires raw read-write database clearance configurations | Secure QR links distribute read access safely with zero system breach risks |
-
----
-
-## System Configuration and Operational Launch
-
-### 1. Requirements
-* Node.js Version 18.0.0 or higher
-* npm package manager
-
-### 2. Environment Variables Configuration
-To set up active network environments, write system keys inside the local `.env` file within the project root:
+### 2. Environment Configuration
+Create a `.env` file in the project root:
 
 ```env
-# Supabase Core Variables
-VITE_SUPABASE_URL=https://your-project.supabase.co
-VITE_SUPABASE_ANON_KEY=ABCDEF...
+VITE_SUPABASE_URL=https://gblefgvrjjryqcyvkhwx.supabase.co
+VITE_SUPABASE_ANON_KEY=sb_publishable_El2tu9Ut_IcxJwY-YKSoVA_Ovnx0HGg
+VITE_CONTRACT_ADDRESS=0x6785275175f306b0372301E26fd0466367bb1de0
+```
 
-# Polygon Smart Contract Details
-VITE_CONTRACT_ADDRESS=0x946bddl......
-VITE_BLOCKCHAIN_RPC_URL=https://polygon-mainnet.infura.io/v3/...
-
-# Secure AI Intelligence & Shielding Credentials
-API_KEY=AIzaSy...
-
-
-### 3. Execution Scripts
-Run standard terminal operations to build, verify, and run the containerized backend and frontend interface elements:
+### 3. Execution Commands
 
 ```bash
-# Clean install necessary package architectures
+# 1. Install dependencies
 npm install
 
-# Compile full production builds across standard environments
-npm run build
+# 2. Start local development server
+npm run dev
 
-# Direct standalone local execution
-npm run start
+# 3. Compile production bundle
+npm run build
 ```
 
 ---
 
-## Regulatory Compliance Declaration
-Evidentia has been explicitly engineered to conform with standard Electronic Signature Preservation guidelines and aligns with CJIS (Criminal Justice Information Services) security directives for digital custodianship. Any manual modifications, log deletion, or bypass attempts of the ArmorIQ secure tracking layer will instantly compromise validation consensus and broadcast real-time network telemetry alerts.
+## ⚖️ Legal & Regulatory Compliance
+Evidentia is engineered to satisfy **CJIS (Criminal Justice Information Services)** data security standards and **Federal Rules of Evidence 902(13)/(14)** for self-authenticating electronic records.
